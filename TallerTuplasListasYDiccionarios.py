@@ -1,4 +1,4 @@
-"""Registro simple de producto y cálculo de costos"""
+# """Registro simple de producto y cálculo de costos"""
 # print("Taller 1:")
 # pr=input("Ingrese el nombre del producto que desea comprar:")
 # pru=float(input("Ingrese el precio unitario del producto:"))
@@ -11,7 +11,7 @@
 # op=pru*cc
 # print("La información sobre su compra es:",dicc)
 # print("El costo total de su compra es:",op)
-"""Factura de múltiples productos"""
+# """Factura de múltiples productos"""
 # print("Taller 2:")
 # pr1n=input("Ingrese el nombre del primer producto que desea comprar:")
 # pr1p=float(input("Ingrese el precio unitario del producto:"))
@@ -43,3 +43,33 @@
 # print("El precio total del producto 3 es:",pr3t)
 # print("El costo general de su compra es:",totalg)
 # print("Gracias por su compra :)")
+"""Registro de notas de un estudiante"""
+print("Taller 3:")
+nombre=(input("Ingrese su nombre:"))
+materia1=(input("Ingrese la primera asignatura que cursa:"))
+materia2=(input("Ingrese la segunda asignatura que cursa:"))
+materia3=(input("Ingrese la tercera asignatura que cursa:"))
+nota1m1=(float(input("Ingrese la primera nota de "+materia1+" a continuación:")))
+nota2m1=(float(input("Ingrese la segunda nota de "+materia1+" a continuación:")))
+nota1m2=(float(input("Ingrese la primera nota de "+materia2+" a continuación:")))
+nota2m2=(float(input("Ingrese la segunda nota de "+materia2+" a continuación:")))
+nota1m3=(float(input("Ingrese la primera nota de "+materia3+" a continuación:")))
+nota2m3=(float(input("Ingrese la segunda nota de "+materia3+" a continuación:")))
+sm1=nota1m1+nota2m1
+sm2=nota1m2+nota2m2
+sm3=nota1m3+nota2m3
+pr1=sm1/2
+pr2=sm2/2
+pr3=sm3/2
+tpl1=(materia1,pr1)
+tpl2=(materia2,pr2)
+tpl3=(materia3,pr3)
+lst1=[tpl1,nota1m1,nota2m1]
+lst2=[tpl2,nota1m2,nota2m2]
+lst3=[tpl3,nota1m3,nota2m3]
+diccionario={
+    "nombre":nombre,
+    "materia":[lst1,lst2,lst3]
+}
+prtotal=pr1+pr2+pr3
+print(nombre," las materias que usted cursó, sus promedios y notas son:",lst1,lst2,lst3," su promedio total entre las tres materias es: ",prtotal)
